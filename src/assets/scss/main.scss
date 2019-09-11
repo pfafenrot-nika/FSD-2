@@ -86,5 +86,16 @@ section, .section {
   }
 }
 
+.color__box {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  left: 150px;
+  top: 145px;
+  border-radius: 6px;
+  background: $dark-shade-100;
+}
+
+
 // Modules
 // @import "modules/my-module.scss";

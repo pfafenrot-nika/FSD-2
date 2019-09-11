@@ -25,7 +25,9 @@ module.exports = {
     paths: PATHS
   },
   entry: {
-    app: PATHS.src,
+    'index': `${PATHS.src}/index.js`,
+    
+    'uikit': `${PATHS.src}/uikit.js`,
     // module: `${PATHS.src}/your-module.js`,
   },
   output: {

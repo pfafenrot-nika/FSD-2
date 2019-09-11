@@ -2,3 +2,10 @@ mixin item(title, descr)
   .item
     h2.item-title= title
     p.item-descr= descr
+
+
+mixin color(backg, text, color)
+  .color__item
+    .color__box
+    span.color__name= text
+    span= color
