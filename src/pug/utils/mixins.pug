@@ -4,8 +4,8 @@ mixin item(title, descr)
     p.item-descr= descr
 
 
-mixin color(backg, text, color)
+//mixin color(backg, text, color)
   .color__item
-    .color__box
+    .color__box style(background=backg)
     span.color__name= text
     span= color

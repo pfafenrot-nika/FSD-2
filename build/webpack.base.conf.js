@@ -19,15 +19,17 @@ const PATHS = {
 const PAGES_DIR = `${PATHS.src}/pug/pages/`
 const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
 
+const IMAGES = fs
+  .readdirSync(`${PATHS.src}/components`)
+  .filter((dirName) => fs.lstatSync(`${PATHS.src}/components/${dirName}`).isDirectory());
+
 module.exports = {
   // BASE config
   externals: {
     paths: PATHS
   },
   entry: {
-    'index': `${PATHS.src}/index.js`,
-    
-    'uikit': `${PATHS.src}/uikit.js`,
+    app: PATHS.src
     // module: `${PATHS.src}/your-module.js`,
   },
   output: {
@@ -129,6 +131,14 @@ module.exports = {
     ...PAGES.map(page => new HtmlWebpackPlugin({
       template: `${PAGES_DIR}/${page}`,
       filename: `./${page.replace(/\.pug/,'.html')}`
-    }))
-  ],
+    })),
+
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/Uikit/colors-type.pug`,
+      filename: './colors-type.html',
+      inject: true
+    })
+  ]
 }
+
+
