@@ -11,15 +11,29 @@ html(lang="en")
 
   body
     .logo
-      a.logo(href="#")
+      a(href="#")
         
 
     block content
-      +text-field(email, 'Text field', 'Email')
-      span Default
+      .container
+        .left-column
+          +text-field('email', 'Text field', 'Email')
+          span Default
 
-      +text-field(text, 'Text field', 'This is pretty awesome')
-      span Hover/Focus
-      
-      +text-field(date, 'Masked text field', 'ДД.ММ.ГГГГ')
-      span Default
+          +text-field('text', 'Text field', 'This is pretty awesome')
+          span Hover/Focus
+          
+          +select-field('Dropdown', 'Сколько гостей', 'Взрослые', 'Подростки', 'Дети')
+          span Default
+
+          +text-field('text', 'Masked text field', 'ДД.ММ.ГГГГ')
+          span Default
+
+          +text-field('date', 'Date dropdown', 'ДД.ММ.ГГГГ')
+          span Default
+
+          +text-field('date', 'Date dropdown', '19.08.2019')
+          span Default
+
+        .center
+        .right-column
