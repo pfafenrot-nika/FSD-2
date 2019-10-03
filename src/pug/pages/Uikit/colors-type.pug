@@ -1,8 +1,35 @@
+include ../../utils/mixins
+
 doctype html
 html(lang="en")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title Document
+    title Colors&Type
+
   body
+    .logo
+      a(href="#")
+
+        
+
+    block content
+      .container
+        section.colors
+          +color('rgb(31, 32, 65)', 'Dark Shade 100%', '#1F2041')
+          +color('rgba(31, 32, 65, 0.75)', 'Dark Shade 75%', '#1F2041')
+          +color('rgba(31, 32, 65, 0.50)', 'Dark Shade 50%', '#1F2041')
+          +color('rgba(31, 32, 65, 0.25)', 'Dark Shade 25%', '#1F2041')
+          +color('rgba(31, 32, 65, 0.05)', 'Dark Shade 5%', '#1F2041')
+          +color('#BC9CFF', 'Purple', '#BC9CFF')
+          +color('#6FCF97', 'Green', '#6FCF97')
+
+        section.type
+          +item('H1', 'This one is the sub-section or widget title', '1')
+          +item('H2', 'Next one is the item title inside widgets', '2')
+          +item('H3', 'This is a label or CTA text', '3')
+          +item('Body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.', '4')
+
+
+      

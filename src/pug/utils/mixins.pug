@@ -1,11 +1,13 @@
-mixin item(title, descr)
-  .item
+
+mixin color(backg, text, color)
+  .color__item
+    .color__box(style={background: backg})
+    // Как смещать квадраты?
+    .color__text
+      span.color__name= text
+      span= color
+
+mixin item(title, descr, classn)
+  .item(class="item-" + classn)
     h2.item-title= title
     p.item-descr= descr
-
-
-//mixin color(backg, text, color)
-  .color__item
-    .color__box style(background=backg)
-    span.color__name= text
-    span= color

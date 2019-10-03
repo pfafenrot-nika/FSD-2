@@ -1,0 +1,114 @@
+// Стили позиционирования
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 125px;
+}
+
+.colors {
+  padding-left: 150px;
+}
+
+.color__item, .type .item {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.color__item {
+  margin-bottom: 20px;
+  .color__text {
+    display: flex;
+    flex-flow: column;
+    padding-left: 40px;
+  }
+}
+
+.type {
+  width: 27%;
+  .item {
+    .item-title {
+      position: absolute;
+      left: -67px;
+      margin-top: -5px;
+    }
+    .item-descr {
+      margin-bottom: 50px;
+      margin-left: -10px;
+    }
+  }
+}
+
+
+// Сделать в общие стили для всех страниц
+.logo a {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  width: 48px;
+  height: 48px;
+  background-image: url(../img/Group.png);
+}
+
+// Стилизация (шрифты, цвета) 
+.color__item {
+  .color__box {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+  }
+  .color__text {
+    padding-top: 5px;
+    font-size: 19px;
+    color: black;
+    font-family: 'Quiksand Bold', Helvetica, Arial, sans-serif;
+    .color__name {
+      font-weight: bold;
+    }
+  }
+}
+
+
+.type {
+  .item {
+    h2 {
+      color: rgba(31, 32, 65, 0.25);
+      font-family: 'Montserrat Regular', Helvetica, Arial, sans-serif;
+    }
+    p {
+      color: #1F2041;
+    }
+  }
+  .item-1 {
+    font-size: 24px;
+    p {
+      font-family: $titleFont;
+      font-weight: bold;
+      line-height: 30px;
+    }
+  } 
+  .item-2 {
+    font-size: 19px;
+    p {
+      font-family: $titleFont;
+      font-weight: bold;
+      line-height: 24px;
+    }
+  } 
+  .item-3 {
+    font-size: 12px;
+    p {
+      font-family: $h3Font;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 15px;
+    }
+  } 
+  .item-4 {
+    font-size: 14px;
+    p {
+      font-family: $mainFont;
+      line-height: 24px;
+      width: 301px;
+    }
+  }
+}
