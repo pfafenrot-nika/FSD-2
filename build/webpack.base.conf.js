@@ -137,6 +137,12 @@ module.exports = {
       template: `${PAGES_DIR}/Uikit/colors-type.pug`,
       filename: './colors-type.html',
       inject: true
+    }),
+
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/Uikit/form-elements.pug`,
+      filename: './form-elements.html',
+      inject: true
     })
   ]
 }

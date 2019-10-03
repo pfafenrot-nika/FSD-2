@@ -1,0 +1,25 @@
+include ../../utils/mixins
+
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Form Elements
+
+  body
+    .logo
+      a.logo(href="#")
+        
+
+    block content
+      +text-field(email, 'Text field', 'Email')
+      span Default
+
+      +text-field(text, 'Text field', 'This is pretty awesome')
+      span Hover/Focus
+      
+      +text-field(date, 'Masked text field', 'ДД.ММ.ГГГГ')
+      span Default
