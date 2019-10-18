@@ -1,0 +1,97 @@
+include ../../blocks/utils/mixins
+include ../../blocks/text-field/text-field
+include ../../blocks/dropdown/dropdown
+include ../../blocks/text-picture/text-picture
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Form Elements
+
+  body
+    .logo
+      a(href="../index.html")
+        
+
+    block content
+      .container.form-elements
+        .left-column
+          +text-picture('#', 'Комфорт', 'Шумопоглощающие стены', 'comfort')
+          +text-field('email', 'Text field', 'Email')
+          span Default
+
+          +text-field('text', 'Text field', 'This is pretty awesome')
+          span Hover/Focus
+          
+          
+          //+select-field('Dropdown', 'Сколько гостей')
+           +option(
+            option(selected disabled)= placehol
+            -var ourt = ['Взрослые', 'Дети', 'Подростки']
+            - for (var i = 0; i <= ourt.length - 1; i++) {
+              option(value= ourt[i])= ourt[i]
+            - }
+           )
+          span Default
+
+          +text-field('text', 'Masked text field', 'ДД.ММ.ГГГГ')
+          span Default
+
+          +text-field('date', 'Date dropdown', 'ДД.ММ.ГГГГ')
+
+          +text-field('date', 'Date dropdown', '19.08.2019')
+
+          +text-field('date', 'Filter date dropdown', '19 авг - 23 авг')
+
+          +text-field('email', 'Subscription text field', 'Email')
+
+        .center
+          +text-field('email', 'Text field', 'Email')
+          span Default
+
+          +text-field('text', 'Text field', 'This is pretty awesome')
+          span Hover/Focus
+          
+          +select-field('Dropdown', 'Сколько гостей', 'Взрослые', 'Подростки', 'Дети')
+          span Default
+
+          +text-field('text', 'Masked text field', 'ДД.ММ.ГГГГ')
+          span Default
+
+          +text-field('date', 'Date dropdown', 'ДД.ММ.ГГГГ')
+
+          +text-field('date', 'Date dropdown', '19.08.2019')
+
+          +text-field('date', 'Filter date dropdown', '19 авг - 23 авг')
+
+          +text-field('email', 'Subscription text field', 'Email')
+
+          +select-field('Dropdown', '2 спальни, 2 кровати')
+          span Default
+
+          +select-field('Dropdown', '2 спальни, 2 кровати')
+          span Expended
+          
+        .right-column
+          +text-field('email', 'Text field', 'Email')
+          span Default
+
+          +text-field('text', 'Text field', 'This is pretty awesome')
+          span Hover/Focus
+          
+          +select-field('Dropdown', 'Сколько гостей', 'Взрослые', 'Подростки', 'Дети')
+          span Default
+
+          +text-field('text', 'Masked text field', 'ДД.ММ.ГГГГ')
+          span Default
+
+          +text-field('date', 'Date dropdown', 'ДД.ММ.ГГГГ')
+
+          +text-field('date', 'Date dropdown', '19.08.2019')
+
+          +text-field('date', 'Filter date dropdown', '19 авг - 23 авг')
+
+          +text-field('email', 'Subscription text field', 'Email')

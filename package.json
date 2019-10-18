@@ -4,8 +4,8 @@
   "description": "2nd step. Toxin",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --open --config ./build/webpack.dev.conf.js",
-    "build": "webpack --config ./build/webpack.build.conf.js"
+    "dev": "webpack-dev-server --mode development --open",
+    "build": "webpack --mode production"
   },
   "browserslist": [
     "> 1%",
@@ -56,6 +56,5 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
-    "vue": "^2.6.10"
   }
 }

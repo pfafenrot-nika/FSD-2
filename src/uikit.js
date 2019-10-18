@@ -2,5 +2,5 @@
 import './js'
 
 // SCSS
-import './assets/scss/main.scss'
-import './assets/scss/modules/uikit.scss'
+import './pages/main.scss'
+//import './assets/scss/modules/uikit.scss'

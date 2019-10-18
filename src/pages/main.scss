@@ -1,8 +1,8 @@
-@import "utils/libs";
-@import "utils/vars";
-@import "utils/mixins";
-@import "utils/fonts";
-@import "utils/reset";
+@import "../blocks/utils/libs.scss";
+@import "../blocks/utils/vars";
+@import "../blocks/utils/mixins.scss";
+@import "../blocks/utils/fonts";
+@import "../blocks/utils/reset";
 
 html {
   line-height: $mainLineHeight;
@@ -88,7 +88,7 @@ section, .section {
 
 
 
-@import "modules/colors-type.scss";
-@import "../../pug/blocks/text-field/text-field.scss";
+@import "/colors-type/colors-type.scss";
+@import "../blocks/text-field/text-field.scss";
 // Modules
 // @import "modules/my-module.scss";

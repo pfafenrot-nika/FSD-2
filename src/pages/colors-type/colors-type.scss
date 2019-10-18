@@ -1,3 +1,6 @@
+@import '../../blocks/utils/fonts';
+@import '../../blocks/utils/vars';
+
 // Стили позиционирования
 .container {
   display: flex;
@@ -25,6 +28,7 @@
 
 .type {
   width: 27%;
+  padding-right: 10px;
   .item {
     .item-title {
       position: absolute;
@@ -42,6 +46,7 @@
 // Сделать в общие стили для всех страниц
 .logo a {
   position: absolute;
+  z-index: 20;
   left: 30px;
   top: 30px;
   width: 48px;
