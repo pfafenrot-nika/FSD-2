@@ -1,0 +1,22 @@
+.checkbox-list {
+  label {
+    text-transform: initial;
+    font-weight: initial;
+    color: $dark-shade-50;
+    cursor: pointer;
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 1px solid $dark-shade-25;
+      border-radius: 4px;
+      vertical-align: top;
+      margin-right: 10px;
+    }
+  }
+  input[type=checkbox] {
+    float: left;
+    display: none;
+  }
+}

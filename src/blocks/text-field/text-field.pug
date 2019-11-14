@@ -1,5 +1,8 @@
 
-mixin text-field(inputType, labelText, placehol)
-  label= labelText
-    input.text-field(type= inputType, placeholder= placehol)
+mixin text-field(inputType, labelClass, labelText, placehol, spanText)
+  .text-field-item
+    label.fieldName.labelClass= labelText
+      span= spanText
+      input.text-field(type= inputType, placeholder= placehol)
+      
 

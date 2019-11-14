@@ -1,16 +1,90 @@
-label {
+// Общие свойства 
+.fieldName {
   text-transform: uppercase;
-}
-input.text-field {
-  width: 320px;
-  height: 44px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 4px;
+  float: left;
+  font-weight: bold;
+  color: $dark-shade-100;
 }
 
-select.select-field {
-  width: 320px;
-  height: 44px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
+input {
+  border: 1px solid $dark-shade-25;
   border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 13px 15px;
+  &::placeholder {
+    color: $dark-shade-25;
+  }
+  &:hover, &:focus {
+    border-color: $dark-shade-50;
+    &::placeholder{
+      color: $dark-shade-75;
+    }
+  }
 }
+
+// Свойства для текстового поля
+.text-field-item {
+  position: relative;
+  label {
+    position: relative;
+  }
+  input {
+    width: 320px;
+    height: 44px;
+  }
+  span {
+    float: right;
+    font-weight: normal;
+    color: $dark-shade-50;
+  }
+  // Позиционирование стрелки в поле Email
+ /* svg.arrow {
+    position: absolute;
+    top: 23px;
+    left: 86%;
+    margin: 10px;
+  }*/
+}
+
+
+@import "../utils/mixins.scss";
+
+// expand_more Стрелочка вниз
+/*.text-field::after {
+  @include icon("\e5cf", rgba(31, 32, 65, 0.5));
+}  */
+
+// arrow_forward Стрелочка вправо
+.arrow_forward:after {
+  @include icon("\e5c8", blue);
+}
+
+// mood Смайлик
+/*.text-field:after {
+  @include icon("\e7f2", blue);
+}*/
+
+
+// location_city Город
+/*.text-field:after {
+  @include icon("\e7f1", blue);
+}*/
+
+
+// favorite Сердечко 
+/**.text-field:after {
+  @include icon("\e87d", blue);
+}**/
+
+// star Звезда полная 
+/*.text-field:after {
+  @include icon("\e838", blue);
+}*/
+
+// star_border Звезда пустая 
+/*.text-field:after {
+  @include icon("\e83a", blue);
+}*/
+
+
+// Font Awesome соц.сети иконки
