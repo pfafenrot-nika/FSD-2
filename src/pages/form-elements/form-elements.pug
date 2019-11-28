@@ -3,6 +3,7 @@ include ../../blocks/text-field/text-field
 include ../../blocks/dropdown/dropdown
 include ../../blocks/text-picture/text-picture
 include ../../blocks/checkbox-list/checkbox
+include ../../blocks/radiobutton/radio
 
 doctype html
 html(lang="en")
@@ -52,9 +53,13 @@ html(lang="en")
           +text-field('email', ' ', 'Text field', 'Email', 'Default')
 
           ul.checkbox-list.fieldName checkbox buttons
-            +checkbox-item('Можно курить')
-            +checkbox-item('Можно с питомцами', 'checked')
-            +checkbox-item('Можно пригласить гостей (до 10 человек)', 'checked')
+              +checkbox-item('Можно курить')
+              +checkbox-item('Можно с питомцами', 'checked')
+              +checkbox-item('Можно пригласить гостей (до 10 человек)', 'checked')
+
+          ul.radiobutton-list.fieldName radio buttons
+              +radio-item('Мужчина', 'Gender', 'checked')
+              +radio-item('Женщина', 'Gender')
           
         .right-column
           +text-field('text', 'label', 'Text field', 'This is pretty awesome', 'Hover/Focus')

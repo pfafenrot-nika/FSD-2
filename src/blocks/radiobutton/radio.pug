@@ -1,0 +1,6 @@
+mixin radio-item(radioText, radioName, checked)
+  li
+    label
+      input.radio__input(type="radio" name= radioName)
+      span.radio__box(class= checked)
+      = radioText

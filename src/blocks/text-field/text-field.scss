@@ -1,5 +1,8 @@
 // Общие свойства 
 .fieldName {
+  // 5px после названия поля формы (TEXT FIELD, CHECKBOX BUTTONS и т.д.)
+  margin-bottom: 5px;
+  
   text-transform: uppercase;
   float: left;
   font-weight: bold;
