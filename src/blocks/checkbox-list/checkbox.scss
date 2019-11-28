@@ -21,6 +21,7 @@
     border-radius: 4px;
     margin-left: -30px;
   }
+  // Механика: через JS добавлять по клику класс checked и удалять
   .checked.check__box{
     border-color: #BC9CFF;
     &:after {
