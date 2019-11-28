@@ -4,6 +4,7 @@ include ../../blocks/dropdown/dropdown
 include ../../blocks/text-picture/text-picture
 include ../../blocks/checkbox-list/checkbox
 include ../../blocks/radiobutton/radio
+include ../../blocks/toggle/toggle
 
 doctype html
 html(lang="en")
@@ -53,13 +54,17 @@ html(lang="en")
           +text-field('email', ' ', 'Text field', 'Email', 'Default')
 
           ul.checkbox-list.fieldName checkbox buttons
-              +checkbox-item('Можно курить')
-              +checkbox-item('Можно с питомцами', 'checked')
-              +checkbox-item('Можно пригласить гостей (до 10 человек)', 'checked')
+            +checkbox-item('Можно курить')
+            +checkbox-item('Можно с питомцами', 'checked')
+            +checkbox-item('Можно пригласить гостей (до 10 человек)', 'checked')
 
           ul.radiobutton-list.fieldName radio buttons
-              +radio-item('Мужчина', 'Gender', 'checked')
-              +radio-item('Женщина', 'Gender')
+            +radio-item('Мужчина', 'Gender', 'checked')
+            +radio-item('Женщина', 'Gender')
+
+          ul.toggle-list.fieldName toggle
+            +toggle-item('Получать спецпредложения', 'toggle-1')
+            +toggle-item('Получать спецпредложения', 'toggle-2')
           
         .right-column
           +text-field('text', 'label', 'Text field', 'This is pretty awesome', 'Hover/Focus')

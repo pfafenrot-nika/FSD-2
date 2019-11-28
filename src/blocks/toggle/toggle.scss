@@ -1,0 +1,63 @@
+.toggle-list {
+  .label {
+    text-transform: initial;
+    font-weight: initial;
+    color: $dark-shade-50;
+    cursor: pointer;
+    padding-left: 10px;
+  }
+  .toggle {
+    top: 5px; // Выравнивание toggle с текстом (! сделать грамотнее)
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    cursor: pointer;
+    &:before {
+      content: "";
+      position: relative;
+      width: 40px;
+      height: 20px;
+      display: block;
+      border: 1px solid $dark-shade-25;
+      border-radius: 10px;
+      transition: background .2s ease;
+    }
+    // Кружок внутри Toggle
+    span {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      width: 12px;
+      height: 12px;
+      display: block;
+      background: $dark-shade-25;
+      border-radius: 10px;
+      transition: all .2s ease;
+      &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        margin: -18px;
+        width: 12px;
+        height: 12px;
+        border-radius: 10px;
+      }
+    }
+  }
+  input:checked + .toggle {
+    &:before {
+      border-color: #BC9CFF;
+    }
+    span {
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      transform: translateX(20px);
+      transition: all .2s cubic-bezier(.8,.4,.3,1.25), background .15s ease;
+      &:before {
+        transform: scale(1);
+        opacity: 0;
+        transition: all .4s ease;
+      }
+    }
+  }
+}

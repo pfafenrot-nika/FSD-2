@@ -1,0 +1,12 @@
+//- <div class="center">
+//-   <input type="checkbox" id="cbx" style="display:none"/>
+//-   <label for="cbx" class="toggle"><span></span></label>    
+//- </div>
+
+
+mixin toggle-item(toggleText, toggleId)
+  li
+    input(type="checkbox" style="display:none" id= toggleId)
+    label(class="toggle" for= toggleId)
+      span
+    span.label= toggleText
