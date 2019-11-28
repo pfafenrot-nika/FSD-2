@@ -4,19 +4,45 @@
     font-weight: initial;
     color: $dark-shade-50;
     cursor: pointer;
-    &:before {
-      content: '';
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      border: 1px solid $dark-shade-25;
-      border-radius: 4px;
-      vertical-align: top;
-      margin-right: 10px;
+    padding-left: 30px;
+  }
+  .check__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+  .check__box {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $dark-shade-25;
+    border-radius: 4px;
+    margin-left: -30px;
+  }
+  .checked.check__box{
+    border-color: #BC9CFF;
+    &:after {
+      position: absolute;
+      font-family: 'Material Icons';
+      font-size: 24px;
+      line-height: 44px;
+      content: "\e5ca";
+      text-align: center;
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      width: 15px;
+      top: -15px;
     }
   }
-  input[type=checkbox] {
-    float: left;
-    display: none;
-  }
+  
+  // .check__svg {
+  //   display: none;
+  // }
+
+  // .check__input:checked .check__box .check__svg {
+  //   display: inline-block;
+  // }
 }

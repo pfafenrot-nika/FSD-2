@@ -50,13 +50,15 @@ input {
 @import "../utils/mixins.scss";
 
 // expand_more Стрелочка вниз
-/*.text-field::after {
-  @include icon("\e5cf", rgba(31, 32, 65, 0.5));
-}  */
+label.expand_more:after {
+  @include icon("\e5cf", $dark-shade-50);
+} 
 
+
+// Поле "Подписаться"
 // arrow_forward Стрелочка вправо
-.arrow_forward:after {
-  @include icon("\e5c8", blue);
+label.arrow_forward:after {
+  @include icon("\e5c8", $gradient-1);
 }
 
 // mood Смайлик
