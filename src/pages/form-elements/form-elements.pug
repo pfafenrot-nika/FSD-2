@@ -5,6 +5,7 @@ include ../../blocks/text-picture/text-picture
 include ../../blocks/checkbox-list/checkbox
 include ../../blocks/radiobutton/radio
 include ../../blocks/toggle/toggle
+include ../../blocks/like-button/like
 
 doctype html
 html(lang="en")
@@ -65,6 +66,13 @@ html(lang="en")
           ul.toggle-list.fieldName toggle
             +toggle-item('Получать спецпредложения', 'toggle-1')
             +toggle-item('Получать спецпредложения', 'toggle-2')
+          
+          .block-like
+            span.fieldName like buttons
+            .block-like__item
+              +like('2')
+            .block-like__item
+              +like('12', 'active')
           
         .right-column
           +text-field('text', 'label', 'Text field', 'This is pretty awesome', 'Hover/Focus')
