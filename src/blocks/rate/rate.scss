@@ -1,0 +1,28 @@
+.rating-area {
+  //overflow: hidden;
+	min-width: 120px;
+	margin: 0 auto;
+}
+.rating-area:not(:checked) > input {
+	display: none;
+}
+.rating-area:not(:checked) > label {
+	float: right;
+	width: 24px;
+	padding: 0;
+	cursor: pointer;
+	font-size: 24px;
+	line-height: 24px;
+  color: #BC9CFF; // Как сделать градиент вместо цвета? Заменить #BC9CFF на linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+}
+.rating-area:not(:checked) > label:before {
+	font-family: 'Material Icons'; 
+  content: "star_border"; 
+}
+.rating-area > input:checked ~ label:before {
+  content: "star"; 
+}
+.rating-area:not(:checked) > label:hover:before,
+.rating-area:not(:checked) > label:hover ~ label:before {
+  content: "star"; 
+}

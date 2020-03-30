@@ -6,6 +6,7 @@ include ../../blocks/checkbox-list/checkbox
 include ../../blocks/radiobutton/radio
 include ../../blocks/toggle/toggle
 include ../../blocks/like-button/like
+include ../../blocks/rate/rate
 
 doctype html
 html(lang="en")
@@ -68,11 +69,27 @@ html(lang="en")
             +toggle-item('Получать спецпредложения', 'toggle-2')
           
           .block-like
-            span.fieldName like buttons
+            span.fieldName like button
             .block-like__item
               +like('2')
             .block-like__item
               +like('12', 'active')
+          
+          .block-rate
+            span.fieldName rate button
+            .rating-area
+              +rate-star("star-5", "5", "Оценка 5")
+              +rate-star("star-4", "4", "Оценка 4")
+              +rate-star("star-3", "3", "Оценка 3")
+              +rate-star("star-2", "2", "Оценка 2")
+              +rate-star("star-1", "1", "Оценка 1")
+            
+            .rating-area.rating-area-2
+              +rate-star("star-2.5", "5", "Оценка 5")
+              +rate-star("star-2.4", "4", "Оценка 4")
+              +rate-star("star-2.3", "3", "Оценка 3")
+              +rate-star("star-2.2", "2", "Оценка 2")
+              +rate-star("star-2.1", "1", "Оценка 1")
           
         .right-column
           +text-field('text', 'label', 'Text field', 'This is pretty awesome', 'Hover/Focus')
