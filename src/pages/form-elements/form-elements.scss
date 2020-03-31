@@ -12,3 +12,16 @@
   min-width: 40px;
   margin-right: 10px;
 }
+
+.block-rate {
+  display: flex;
+  flex-flow: row wrap;
+  min-width: 300px;
+  .fieldName {
+    flex-basis: 100%;
+  }
+  .rating-area {
+    margin-left: 0;
+    margin-right: 20px;
+  }
+}
